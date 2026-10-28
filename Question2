@@ -1,0 +1,16 @@
+price = float(input("What is the sale price?"))
+
+shipstate = input("What state is the item being shipped to?")
+
+shiptax = None
+
+if shipstate == "TX" or shipstate == "LA":
+    shiptax = 1.25
+elif shipstate == "CA":
+    shiptax = 3.25
+else:
+    shiptax = 0.50
+    
+taxtotal = shiptax * price
+
+print("Your shipping tax is: ", round(taxtotal, 2))
